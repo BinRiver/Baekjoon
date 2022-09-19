@@ -1,20 +1,15 @@
-n = int(input())
-result_list = []
+N = int(input())
 
-for i in range(0, n):
-    OX = input()
-    OX_list = ' '.join(OX).split(' ')
-    num = len(OX_list)
-    k = 0
-    result = 0
-    for l in range(0, num):
-        if OX_list[l] == 'O':
-            k += 1
+for i in range(N):
+    OX = list(input())
+    index = 0
+    count = 0
+    sum = 0
+    while index < len(OX):
+        if OX[index] == "O":
+            count += 1
         else:
-            k = 0
-        if k > 0:
-            result += k
-    result_list.append(result)
-
-for i in range(0, n):
-    print(result_list[i])
+            count = 0
+        index += 1
+        sum += count
+    print(sum)
