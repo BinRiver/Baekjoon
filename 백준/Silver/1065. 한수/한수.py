@@ -1,22 +1,22 @@
-def han(i):
-    num_list = []
-    num_list = ' '.join(str(i)).split(' ')
-    if len(num_list) <= 2:
-        k = 1
+def Han(n):
+    if n < 100:
+        return 1
     else:
-        for j in range(1, len(num_list)-1):
-            a = (int(num_list[j-1]) + int(num_list[j+1]))/2
-            if a == int(num_list[j]):
-                k = 1
-                continue
-            else:
-                k = 0
-                break
-    if k == 1:
-        return i
-i = 0
-n = int(input())
-for m in range(1, n+1):
-    if han(m) == m:
-        i += 1
-print(i)
+        num = list(map(int, str(n)))
+        d = num[1] - num[0]
+        k = 0
+        for i in range(0, len(num)):
+            for j in range(k, len(num)):
+                num[j] -= d
+            k += 1
+        num = list(set(num))
+        if len(num) == 1:
+            return 1
+        else:
+            return 0
+
+N = int(input())
+count = 0
+for i in range(1, N+1):
+    count += Han(i)
+print(count)
