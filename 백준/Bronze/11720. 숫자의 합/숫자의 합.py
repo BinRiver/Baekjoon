@@ -1,7 +1,7 @@
-n = int(input())
-num = input()
+N = int(input())
+num = list(map(int, input()))
 
-result = 0
-for i in range(n):
-    result += int(num[i])
-print(result)
+sum = 0
+for n in num:
+    sum += n
+print(sum)
