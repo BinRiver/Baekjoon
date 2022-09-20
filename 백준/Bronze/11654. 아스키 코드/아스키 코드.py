@@ -1,3 +1,2 @@
-n = input()
-
-print(ord(n))
+C = input()
+print(ord(C))
