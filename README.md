@@ -1,2 +1,2 @@
-A place to solve problems in Baekjoon.
-백준 문제풀이
+백준 문제 풀이
+Solved Baekjoon problems
